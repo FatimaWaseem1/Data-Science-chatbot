@@ -1,0 +1,32 @@
+# LLM settings
+llm:
+  model: "deepseek-r1-distill-llama-70b"
+  temperature: 0.3
+  max_tokens: 600
+
+# Document processing
+documents:
+  chunk_size: 1000
+  chunk_overlap: 200
+  chunk_size_code: 800
+  chunk_overlap_code: 150
+  chunk_size_html: 900
+  chunk_overlap_html: 200
+  supported_extensions: [".pdf", ".txt", ".csv", ".ipynb", ".R", ".py", ".md"]
+
+# Retrieval settings
+retrieval:
+  k: 6
+  score_threshold: 0.25
+  use_mmr: true
+  mmr_lambda: 0.5
+
+# Safety / grounding
+grounding:
+  strict_mode_default: true
+  refuse_if_no_context: true
+
+# Token / context control
+context:
+  max_history_messages: 6
+  max_context_tokens: 2500
